@@ -1,3 +1,3 @@
 # RMarkdown Article Template
 
-A very simple template for RMarkdown articles. It uses [Linux Libertine](https://en.wikipedia.org/wiki/Linux_Libertine), `darkblue` colour for links, back references, and a few other custom LaTeX commands. It requires [pandoc](http://pandoc.org/) and a full [TeX system](https://latex-project.org/ftp.html).
+A very simple template for [RMarkdown](http://rmarkdown.rstudio.com/) articles. It uses [Linux Libertine](https://en.wikipedia.org/wiki/Linux_Libertine), `darkblue` colour for links, numbered sections, British English spelling, back references, and a few other custom LaTeX commands. It requires [RStudio](https://www.rstudio.com/), [pandoc](http://pandoc.org/), and a [TeX system](https://latex-project.org/ftp.html). 

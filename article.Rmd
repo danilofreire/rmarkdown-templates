@@ -2,7 +2,7 @@
 title:  |
         | This is a Very Long Title:
         | And a Very Long Subtitle
-author: "Danilo Freire^[PhD candidate, Department of Political Economy, King's College London. Email address: [danilofreire@gmail.com](mailto:danilofreire@gmail.com). I would like to thank ... for their helpful comments and suggestions. The usual disclaimer applies.  All data, code and information required to replicate this study are available at the following web address: <https://github.com/danilofreire/rmarkdown-article-template>.]"
+author: "Your Name^[PhD candidate, Department of X, University of ZZ. Email address: [your@email.com](mailto:your@email.com). I would like to thank ... for their helpful comments and suggestions. The usual disclaimer applies.  All data, code and information required to replicate this study are available at the following web address: <https://github.com/danilofreire/rmarkdown-article-template>.]"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   pdf_document:
@@ -14,9 +14,9 @@ bibliography: references.bib
 biblio-style: apalike
 ---
 
-\begin{abstract}
+\doublespacing
 
-\onehalfspacing
+\begin{abstract}
 
 \noindent
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae blandit ligula. Phasellus quis elit venenatis, suscipit lacus sed, pellentesque risus. Proin vitae sapien id enim ultrices pretium ac eget risus. Curabitur eget elit feugiat, congue orci sit amet, porttitor libero. Vestibulum volutpat mauris tellus. Proin accumsan, velit ut feugiat pulvinar, augue urna iaculis magna, et iaculis mi nunc vitae justo. Nulla enim dui, elementum sit amet pharetra quis, tempus vitae nisl.
@@ -32,8 +32,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae blandit
 \end{abstract}
 
 \newpage
-
-\doublespacing
 
 # Introduction\label{intro}
 
