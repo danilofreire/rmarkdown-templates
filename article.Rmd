@@ -18,12 +18,15 @@ biblio-style: apalike
 
 \begin{abstract}
 
+\noindent
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae blandit ligula. Phasellus quis elit venenatis, suscipit lacus sed, pellentesque risus. Proin vitae sapien id enim ultrices pretium ac eget risus. Curabitur eget elit feugiat, congue orci sit amet, porttitor libero. Vestibulum volutpat mauris tellus. Proin accumsan, velit ut feugiat pulvinar, augue urna iaculis magna, et iaculis mi nunc vitae justo. Nulla enim dui, elementum sit amet pharetra quis, tempus vitae nisl.
 
 \vspace{.5cm}
+\noindent
 \textbf{Keywords}: latex; rmarkdown; rstudio; template
 
-\vspace{.5cm}
+\vspace{.25cm}
+\noindent
 \textbf{JEL Codes}: D710; K420; Z00
 
 \end{abstract}
