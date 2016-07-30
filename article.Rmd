@@ -14,7 +14,7 @@ bibliography: references.bib
 biblio-style: apalike
 ---
 
-\doublespacing
+\onehalfspacing
 
 \begin{abstract}
 
@@ -37,6 +37,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae blandit
 
 \setlength{\parindent}{1cm}
 \setlength{\parskip}{0pt}
+\doublespacing
 
 This is section \ref{intro}. *Italics*, **boldface**. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque. Donec nec justo vel nunc lacinia pulvinar.[^fn-1]
 
