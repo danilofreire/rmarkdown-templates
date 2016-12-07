@@ -11,6 +11,7 @@ output:
     number_sections: yes
     keep_tex: yes
     template: template.latex
+    latex_engine: pdflatex
 bibliography: references.bib
 biblio-style: apalike
 ---
