@@ -1,12 +1,16 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb,amsmath}
-\usepackage{lmodern}
+\usepackage{microtype}
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
+\usepackage{inconsolata}
+% Uncomment the line below if you want to use XeLaTeX or 
+% write on ShareLaTeX or Overleaf
+% \setmonofont[Scale=0.90,BoldFont=inconsolata-bold.ttf]{inconsolata-regular.ttf}
 \usepackage{color}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.55}
 \usepackage{setspace}
-\usepackage[top=2.5cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
 \usepackage[backref,pagebackref]{hyperref}
 \usepackage{graphicx}
 \usepackage{float}
@@ -32,7 +36,6 @@
     \fi}
 \renewcommand{\backreftwosep}{ and~} 
 \renewcommand{\backreflastsep}{ and~}
-
 \hypersetup{
   linkcolor=darkblue,
   citecolor=darkblue,
@@ -51,6 +54,7 @@ $if(euro)$
 $endif$
 \else % if luatex or xelatex
   \ifxetex
+    \usepackage{amssymb,amsmath}
     \usepackage{mathspec}
   \else
     \usepackage{fontspec}

@@ -1,7 +1,7 @@
 ---
 title:  |
-        | This is a Very Long Title:
-        | And a Very Long Subtitle
+        | Long Article Title:
+        | A Very Long Subtitle
 author: "Your Name^[PhD candidate, Department of X, University of ZZ. Email address: [your@email.com](mailto:your@email.com). I would like to thank ... for their helpful comments and suggestions. The usual disclaimer applies.  All data, code and information required to replicate this study are available at the following web address: <https://github.com/danilofreire/rmarkdown-article-template>.]"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
@@ -9,6 +9,7 @@ output:
     citation_package: natbib
     fig_caption: yes
     number_sections: yes
+    keep_tex: yes
     template: template.latex
 bibliography: references.bib
 biblio-style: apalike
@@ -37,7 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae blandit
 \setlength{\parskip}{0pt}
 \doublespacing
 
-This is section \ref{intro}. *Italics*, **boldface**. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque. Donec nec justo vel nunc lacinia pulvinar.[^fn-1]
+This is section \ref{intro}. *Italics*, **boldface**, `typewriter`. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque.[^fn-1]
 
 [^fn-1]: This is a footnote. A citation: @freire2014 [pp. 10--15]. An [internet link](http://github.com/danilofreire).
 
@@ -55,7 +56,7 @@ Table: Your Caption\label{tab:tab1}
 
 A \LaTeX \hspace{.005cm} equation: 
 
-$$ y = \beta_{0} + \beta_{1} x + \epsilon $$
+$$ Y = \beta_{0} + \beta_{1} X + \epsilon $$
 
 1. Ordered
 2. List
@@ -63,6 +64,19 @@ $$ y = \beta_{0} + \beta_{1} x + \epsilon $$
 
 * Unordered
 * List
+
+\newpage
+
+R chunk: 
+
+```{r, tidy = TRUE}
+data("mtcars")
+str(mtcars)
+plot(mtcars$wt, mtcars$mpg, main = "Scatterplot Example", 
+     xlab = "Car Weight", ylab = "Miles Per Gallon", pch = 19)
+abline(lm(mpg ~ wt, data = mtcars), col = "red")
+```
+
 
 \newpage
 \setlength{\parindent}{0cm}
