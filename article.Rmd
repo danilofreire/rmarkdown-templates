@@ -70,6 +70,7 @@ $$ Y = \beta_{0} + \beta_{1} X + \epsilon $$
 
 R chunk: 
 
+\footnotesize
 ```{r, tidy = TRUE}
 data("mtcars")
 str(mtcars)
@@ -78,6 +79,7 @@ plot(mtcars$wt, mtcars$mpg, main = "Scatterplot Example",
 abline(lm(mpg ~ wt, data = mtcars), col = "red")
 ```
 
+\normalsize
 
 \newpage
 \setlength{\parindent}{0cm}
