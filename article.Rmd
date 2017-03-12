@@ -1,6 +1,6 @@
 ---
-title:  |
-        | Long Article Title:
+title:  | 
+        | Long Article Title: 
         | A Very Long Subtitle
 author: "Your Name"
 date: "`r format(Sys.time(), '%d %B %Y')`"
@@ -10,6 +10,7 @@ keywords: R Markdown, pandoc, template
 jelcodes: A00, B11, C22
 fontfamily: libertine
 fontsize: 12pt
+monospace-url: yes
 spacing: double
 papersize: a4paper
 bibliography: references.bib
