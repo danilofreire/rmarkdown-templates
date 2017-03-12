@@ -25,12 +25,12 @@ output:
     latex_engine: pdflatex
 ---
 
-# Introduction\label{intro}
+# Introduction\label{sec:intro}
 
 \setlength{\parindent}{1cm}
 \setlength{\parskip}{0pt}
 
-This is section \ref{intro}. *Italics*, **boldface**, `typewriter`. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque.[^fn-1]
+This is section \ref{sec:intro}. *Italics*, **boldface**, `typewriter`. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque.[^fn-1]
 
 [^fn-1]: This is a footnote. A citation: @freire2014 [pp. 10--15]. An [internet link](http://github.com/danilofreire).
 
