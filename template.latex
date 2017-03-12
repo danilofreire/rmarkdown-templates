@@ -1,9 +1,16 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
 \usepackage{amssymb,amsmath}
-\usepackage{microtype}
-\usepackage{libertine}
-\usepackage[libertine]{newtxmath}
-\usepackage{inconsolata}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+$if(fontfamily)$
+\usepackage[$fontfamilyoptions$]{$fontfamily$}
+$else$
+\usepackage{lmodern}
+$endif$
+
+
+  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+  \usepackage[utf8]{inputenc}
+\usepackage[scaled=0.9]{inconsolata}
 % Uncomment the line below if you want to use XeLaTeX or 
 % write on ShareLaTeX or Overleaf
 % \setmonofont[Scale=0.90,BoldFont=inconsolata-bold.ttf]{inconsolata-regular.ttf}
@@ -221,7 +228,7 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-\onehalfspacing
+\doublespacing
 
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
@@ -239,10 +246,22 @@ $endif$
 $if(title)$
 \maketitle
 $endif$
+
 $if(abstract)$
 \begin{abstract}
-$abstract$
+\noindent $abstract$
+\vspace{.5cm}
+
+$if(keywords)$
+\noindent \textbf{Keywords}: $keywords$
+\vspace{.25cm}
+
+$if(jelcodes)$
+\noindent \textbf{JEL Classification Codes}: $jelcodes$
+$endif$
+$endif$
 \end{abstract}
+\newpage
 $endif$
 
 $for(include-before)$
