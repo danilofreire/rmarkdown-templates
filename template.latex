@@ -6,10 +6,8 @@ $if(fontfamily)$
 $else$
 \usepackage{lmodern}
 $endif$
-
-
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-  \usepackage[utf8]{inputenc}
+\usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[scaled=0.9]{inconsolata}
 % Uncomment the line below if you want to use XeLaTeX or 
 % write on ShareLaTeX or Overleaf
