@@ -1,13 +1,15 @@
 ---
-title:  | 
-        | Long Article Title: 
+title:  |
+        | Long Article Title:
         | A Very Long Subtitle
-author: "Your Name"
+author: 
+  - "Author One"
+  - "Author Two"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-thanks: "PhD candidate, Department of X, University of ZZ. Email address: [your@email.com](mailto:your@email.com). I would like to thank ... for their helpful comments and suggestions. The usual disclaimer applies.  All data, code and information required to replicate this study are available at the following web address: <https://github.com/danilofreire/rmarkdown-article-template>."
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae blandit ligula. Phasellus quis elit venenatis, suscipit lacus sed, pellentesque risus. Proin vitae sapien id enim ultrices pretium ac eget risus. Curabitur eget elit feugiat, congue orci sit amet, porttitor libero. Vestibulum volutpat mauris tellus. Proin accumsan, velit ut feugiat pulvinar, augue urna iaculis magna, et iaculis mi nunc vitae justo. Nulla enim dui, elementum sit amet pharetra quis, tempus vitae nisl.
-keywords: R Markdown, pandoc, template
-jelcodes: A00, B11, C22
+thanks: "PhD candidates, Department of X, University of Z."
+abstract: "This is a very simple article template for RMarkdown. It uses Linux Libertine and Inconsolata fonts, British English spelling, darkblue colour for links, double spacing, back references, and numbered sections. The template also has pre-formatted entries for article abstracts, keywords, and JEL classification codes. Check out the example code and the pdf output to see how it looks like. You will need to install `R` (and the `rmarkdown` package), `pandoc`, and a `TeX` system to compile the pdf. Important note: all fields apart from `title` are quoted because texts with embedded colons (:) are not read correctly by YAML. So I am quoting everything but the title just to be safe; maybe you should do the same too :)"
+keywords: "R Markdown; pandoc; template"
+jelcodes: "A00, B11, C22"
 fontfamily: libertine
 fontsize: 12pt
 monospace-url: yes
@@ -32,7 +34,7 @@ output:
 
 This is section \ref{sec:intro}. *Italics*, **boldface**, `typewriter`. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque.[^fn-1]
 
-[^fn-1]: This is a footnote. A citation: @freire2014 [pp. 10--15]. An [internet link](http://github.com/danilofreire).
+[^fn-1]: This is a footnote. A citation: @freire2014 [pp. 10--15]. An internet link: <https://github.com/danilofreire/rmarkdown-article-template>.
 
 Aenean tortor lacus, pharetra vel posuere eget, gravida non lorem. Phasellus eros ante, dapibus tincidunt nisl eget, iaculis fermentum odio. Suspendisse vitae nunc ac mauris semper molestie. Donec aliquam tellus eros, non interdum eros iaculis ut. Phasellus nisl dui, aliquam ullamcorper ante non, hendrerit molestie risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan libero a purus sodales, eget vulputate orci pellentesque. Morbi sit amet tellus suscipit, gravida quam eget, mollis tortor. Etiam eu urna dictum, condimentum nunc ut, ullamcorper elit. Table \ref{tab:tab1}:
 
