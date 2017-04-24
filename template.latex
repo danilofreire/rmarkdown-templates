@@ -8,7 +8,7 @@ $else$
 $endif$
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[scaled=.95]{inconsolata}
+\usepackage[scaled=.9]{inconsolata}
 % Uncomment the line below if you want to use XeLaTeX or 
 % write on ShareLaTeX or Overleaf
 % \setmonofont[Scale=0.90,BoldFont=inconsolata-bold.ttf]{inconsolata-regular.ttf}
