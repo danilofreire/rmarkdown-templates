@@ -19,6 +19,7 @@ $endif$
 \usepackage[backref,pagebackref]{hyperref}
 \usepackage{graphicx}
 \usepackage{float}
+\floatplacement{figure}{H}
 \usepackage{pgf}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
