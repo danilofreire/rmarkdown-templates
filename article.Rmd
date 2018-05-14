@@ -11,6 +11,7 @@ abstract: "This is a very simple article template for RMarkdown. It uses Linux L
 keywords: "R Markdown; pandoc; template"
 jelcodes: "A00, B11, C22"
 fontfamily: libertine
+fontawesome: yes
 fontsize: 12pt
 monospace-url: yes
 spacing: double
@@ -24,7 +25,6 @@ output:
     number_sections: yes
     keep_tex: yes
     template: template.latex
-    latex_engine: pdflatex
 ---
 
 # Introduction\label{sec:intro}
@@ -34,7 +34,7 @@ output:
 
 This is section \ref{sec:intro}. *Italics*, **boldface**, `typewriter`. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque.[^fn-1]
 
-[^fn-1]: This is a footnote. A citation: @freire2014 [pp. 10--15]. An internet link: <https://github.com/danilofreire/rmarkdown-article-template>.
+[^fn-1]: This is a footnote. A citation: @freire2014 [10--15]. An internet link: <https://github.com/danilofreire/rmarkdown-article-template>.
 
 Aenean tortor lacus, pharetra vel posuere eget, gravida non lorem. Phasellus eros ante, dapibus tincidunt nisl eget, iaculis fermentum odio. Suspendisse vitae nunc ac mauris semper molestie. Donec aliquam tellus eros, non interdum eros iaculis ut. Phasellus nisl dui, aliquam ullamcorper ante non, hendrerit molestie risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan libero a purus sodales, eget vulputate orci pellentesque. Morbi sit amet tellus suscipit, gravida quam eget, mollis tortor. Etiam eu urna dictum, condimentum nunc ut, ullamcorper elit. Table \ref{tab:tab1}:
 
@@ -63,11 +63,11 @@ Y = \beta_{0} + \beta_{1} X + \epsilon
 
 R chunk: 
 
-```{r, tidy = TRUE, fig.cap="A simple scatterplot with a caption quote", fig.width=5, fig.height=3}
+```{r, tidy = TRUE, fig.cap="A simple scatterplot with a caption quote", fig.width=4.5, fig.height=3}
 data("mtcars")
 summary(mtcars[,1:4])
-plot(mtcars$wt, mtcars$mpg, xlab = "Car Weight", ylab = "Miles Per Gallon", pch = 19)
-abline(lm(mpg ~ wt, data = mtcars), col = "red")
+plot(mtcars$hp, mtcars$mpg, xlab = "Gross Horsepower", ylab = "Miles Per Gallon", pch = 19)
+abline(lm(mpg ~ hp, data = mtcars), col = "red")
 ```
 
 \newpage
