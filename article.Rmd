@@ -5,7 +5,7 @@ title:  |
 author: 
   - "Author One"
   - "Author Two"
-date: "`r format(Sys.time(), '%d %B %Y')`"
+date: \today
 thanks: "PhD candidates, Department of X, University of Z."
 abstract: "This is a very simple article template for RMarkdown. It uses Linux Libertine and Inconsolata fonts, British English spelling, darkblue colour for links, double spacing, back references, and numbered sections. The template also has pre-formatted entries for article abstracts, keywords, and JEL classification codes. Check out the example code and the pdf output to see how it looks like. You will need to install `R` (and the `rmarkdown` package), `pandoc`, and a `TeX` system to compile the pdf. Important note: all fields apart from `title` are quoted because texts with embedded colons (:) are not read correctly by YAML. So I am quoting everything but the title just to be safe; maybe you should do the same too :)"
 keywords: "R Markdown; pandoc; template"
@@ -23,7 +23,7 @@ output:
     citation_package: natbib
     fig_caption: yes
     number_sections: yes
-    keep_tex: yes
+    keep_tex: no
     template: template.latex
 ---
 
@@ -34,7 +34,7 @@ output:
 
 This is section \ref{sec:intro}. *Italics*, **boldface**, `typewriter`. Pellentesque quam justo, commodo nec gravida quis, rutrum et nibh. Donec ornare iaculis dolor vitae euismod. Sed congue lectus lorem, vel suscipit enim porttitor et. Morbi suscipit ex a sapien condimentum elementum. Duis interdum condimentum ornare. Vivamus sit amet dolor ultricies lacus laoreet maximus. Etiam imperdiet nunc a malesuada varius. Sed sem velit, maximus id tincidunt vel, pulvinar in neque.[^fn-1]
 
-[^fn-1]: This is a footnote. A citation: @freire2014 [10--15]. An internet link: <https://github.com/danilofreire/rmarkdown-article-template>.
+[^fn-1]: This is a footnote. A citation: @freire2014 [10--15]. Link: [`https://github.com/danilofreire/rmarkdown-article-template`](https://github.com/danilofreire/rmarkdown-article-template).
 
 Aenean tortor lacus, pharetra vel posuere eget, gravida non lorem. Phasellus eros ante, dapibus tincidunt nisl eget, iaculis fermentum odio. Suspendisse vitae nunc ac mauris semper molestie. Donec aliquam tellus eros, non interdum eros iaculis ut. Phasellus nisl dui, aliquam ullamcorper ante non, hendrerit molestie risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan libero a purus sodales, eget vulputate orci pellentesque. Morbi sit amet tellus suscipit, gravida quam eget, mollis tortor. Etiam eu urna dictum, condimentum nunc ut, ullamcorper elit. Table \ref{tab:tab1}:
 

@@ -6,7 +6,7 @@ $else$
 \usepackage{lmodern}
 $endif$
 % If you're using libertine, this math font looks nice:
-% \usepackage[libertine]{newtxmath}
+\usepackage[libertine]{newtxmath}
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[scaled=.9]{inconsolata}
 % Uncomment the line below if you want to use XeLaTeX or 
