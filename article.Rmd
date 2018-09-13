@@ -46,7 +46,7 @@ Aenean tortor lacus, pharetra vel posuere eget, gravida non lorem. Phasellus ero
 
 Table: Your Caption\label{tab:tab1}
 
-A \LaTeX \hspace{.005cm} equation: 
+A \LaTeX{} equation: 
 
 \begin{equation}
 Y = \beta_{0} + \beta_{1} X + \epsilon
