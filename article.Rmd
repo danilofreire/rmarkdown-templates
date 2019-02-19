@@ -88,11 +88,11 @@ kable(df, "latex", booktabs = T, caption = "Your Caption") %>%
   add_header_above(c(" " = 1, "Group 1" = 2, "Group 2" = 2,
                      "Group 3" = 1, "Group 4" = 1)) %>%
   add_header_above(c(" ", "Group 4" = 4, "Group 5" = 2), bold = T)%>%
-  footnote(general = "You comments come here.")
+  footnote(general = "You comments go here.")
 ```
 \doublespacing
 
-I still have to find a better way to have single-spaced `knitr` code chunks and double-spaced text in the manuscript. Sorry for that.
+I still have to find a better way to have single-spaced `knitr` code chunks and double-spaced text in the manuscript. Sorry for that. So far you have to use `\singlespacing` before each code chunk and `\doublespacing` before the text. If you're okay with both text and code being double-spaced, you don't have to do anything :)
 
 \newpage
 \setlength{\parindent}{0cm}
