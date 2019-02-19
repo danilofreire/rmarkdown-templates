@@ -46,7 +46,7 @@ Aenean tortor lacus, pharetra vel posuere eget, gravida non lorem. Phasellus ero
 
 Table: Your Caption\label{tab:tab1}
 
-A \LaTeX{} equation: 
+A \LaTeX \hspace{.01cm} equation: 
 
 \begin{equation}
 Y = \beta_{0} + \beta_{1} X + \epsilon
@@ -63,12 +63,36 @@ Y = \beta_{0} + \beta_{1} X + \epsilon
 
 R chunk: 
 
-```{r, tidy = TRUE, fig.cap="A simple scatterplot with a caption quote", fig.width=4.5, fig.height=3}
+\singlespacing
+```{r, tidy=FALSE, fig.align='center', fig.width=4.5, fig.height=3, fig.cap="A simple scatterplot with a caption quote"}
 data("mtcars")
 summary(mtcars[,1:4])
-plot(mtcars$hp, mtcars$mpg, xlab = "Gross Horsepower", ylab = "Miles Per Gallon", pch = 19)
+plot(mtcars$hp, mtcars$mpg,
+     xlab = "Gross Horsepower",
+     ylab = "Miles Per Gallon",
+     pch  = 19)
 abline(lm(mpg ~ hp, data = mtcars), col = "red")
 ```
+
+\newpage
+
+A table using `kableExtra()`:
+
+\singlespacing
+```{r, tidy=FALSE, warning=FALSE}
+library(kableExtra)
+df <- mtcars[1:5, 1:6]
+kable(df, "latex", booktabs = T, caption = "Your Caption") %>%
+  kable_styling(position = "center", font_size = 12,
+                latex_options = "hold_position") %>%
+  add_header_above(c(" " = 1, "Group 1" = 2, "Group 2" = 2,
+                     "Group 3" = 1, "Group 4" = 1)) %>%
+  add_header_above(c(" ", "Group 4" = 4, "Group 5" = 2), bold = T)%>%
+  footnote(general = "You comments come here.")
+```
+\doublespacing
+
+I still have to find a better way to have single-spaced `knitr` code chunks and double-spaced text in the manuscript. Sorry for that.
 
 \newpage
 \setlength{\parindent}{0cm}

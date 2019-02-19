@@ -22,6 +22,7 @@ $endif$
 \usepackage{threeparttablex}
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
+\usepackage{etoolbox}
 % Uncomment the line below if you want to use XeLaTeX or 
 % write on ShareLaTeX or Overleaf
 % \setmonofont[Scale=.9,BoldFont=inconsolata-bold.ttf]{inconsolata-regular.ttf}
