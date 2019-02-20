@@ -87,7 +87,7 @@ kable(df, "latex", booktabs = T, caption = "Your Caption") %>%
                 latex_options = "hold_position") %>%
   add_header_above(c(" " = 1, "Group 1" = 2, "Group 2" = 2,
                      "Group 3" = 1, "Group 4" = 1)) %>%
-  add_header_above(c(" ", "Group 4" = 4, "Group 5" = 2), bold = T)%>%
+  add_header_above(c(" ", "Group 5" = 4, "Group 6" = 2), bold = T) %>%
   footnote(general = "Your comments go here.")
 ```
 \doublespacing
