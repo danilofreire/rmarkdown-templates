@@ -1,3 +1,4 @@
+% !TEX program = XeLaTeX
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
 \newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
 $if(fontfamily)$
@@ -8,7 +9,7 @@ $endif$
 % If you're using libertine, this math font looks nice:
 \usepackage[libertine]{newtxmath}
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-\usepackage[scaled=.9]{inconsolata}
+\usepackage[scaled=.95]{inconsolata}
 % Add the following packages to support kableExtra
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -23,9 +24,6 @@ $endif$
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
 \usepackage{etoolbox}
-% Uncomment the line below if you want to use XeLaTeX or 
-% write on ShareLaTeX or Overleaf
-% \setmonofont[Scale=.9,BoldFont=inconsolata-bold.ttf]{inconsolata-regular.ttf}
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.55}
 \usepackage{setspace}

@@ -3,10 +3,10 @@ title:  |
         | Long Article Title:
         | A Very Long Subtitle
 author: 
-  - "Author One"
-  - "Author Two"
+  - "Author One[^auth01]"
+  - "Author Two[^auth02]"
 date: \today
-thanks: "PhD candidates, Department of X, University of Z."
+thanks: "The authors thank Professors John Smith and Jane Doe for their helpful comments and insightful suggestions."
 abstract: "This is a very simple article template for RMarkdown. It uses Linux Libertine and Inconsolata fonts, British English spelling, darkblue colour for links, double spacing, back references, and numbered sections. The template also has pre-formatted entries for article abstracts, keywords, and JEL classification codes. Check out the example code and the pdf output to see how it looks like. You will need to install `R` (and the `rmarkdown` package), `pandoc`, and a `TeX` system to compile the pdf. Important note: all fields apart from `title` are quoted because texts with embedded colons (:) are not read correctly by YAML. So I am quoting everything but the title just to be safe; maybe you should do the same too :)"
 keywords: "R Markdown; pandoc; template"
 jelcodes: "A00, B11, C22"
@@ -26,6 +26,10 @@ output:
     keep_tex: no
     template: template.latex
 ---
+
+[^auth01]: You can add author information using footnotes. 
+
+[^auth02]: PhD Candidate, Department of X, University of Z, [`name@email.com`](name@email.com).
 
 # Introduction\label{sec:intro}
 
