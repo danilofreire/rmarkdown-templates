@@ -9,7 +9,7 @@ $endif$
 % If you're using libertine, this math font looks nice:
 \usepackage[libertine]{newtxmath}
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-\usepackage[scaled=.95]{inconsolata}
+\usepackage[scaled=.9]{inconsolata}
 % Add the following packages to support kableExtra
 \usepackage{booktabs}
 \usepackage{longtable}

@@ -1,7 +1,7 @@
 ---
 title:  |
-        | Long Article Title:
-        | A Very Long Subtitle
+        | **Long Article Title:**
+        | **A Very Long Subtitle**
 author: 
   - "Author One[^auth01]"
   - "Author Two[^auth02]"
