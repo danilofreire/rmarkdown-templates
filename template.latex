@@ -1,15 +1,17 @@
 % !TEX program = XeLaTeX
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
-\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
 $if(fontfamily)$
 \usepackage[$fontfamilyoptions$]{$fontfamily$}
 $else$
-\usepackage{lmodern}
+\usepackage{libertine}
 $endif$
-% If you're using libertine, this math font looks nice:
+% This is a nice mathfont, it fits well with Libertine
+% Comment the line if you want to use a different one
 \usepackage[libertine]{newtxmath}
-\usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-\usepackage[scaled=.9]{inconsolata}
+% The default monofont 
+% Again, comment the line below if you want to change it
+\usepackage[scaled=.95]{inconsolata}
+
 % Add the following packages to support kableExtra
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -24,10 +26,26 @@ $endif$
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
 \usepackage{etoolbox}
+\usepackage{tocloft}
+
+% Dots in toc
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Colours
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.55}
+
+% Spacing
 \usepackage{setspace}
+
+% Margin
+$if(margin)$
+\usepackage[margin=$margin$]{geometry}
+$else$
 \usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+$endif$
+
+% Packages I've been using for different reasons...
 \usepackage[backref,pagebackref]{hyperref}
 \usepackage{dcolumn}
 \usepackage{graphicx}
@@ -39,14 +57,19 @@ $endif$
 \usetikzlibrary{positioning}
 \usepackage{mathtools}
 \usepackage{caption}
-\usepackage{ifthen}
+
+% Babel
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
 \cleanlookdateon
+
+% Penalties
 \exhyphenpenalty=1000
 \hyphenpenalty=1000
 \widowpenalty=1000
 \clubpenalty=1000
+
+% Back references
 \renewcommand*{\backref}[1]{}
 \renewcommand*{\backrefalt}[4]{%
     \ifcase #1 (Not cited.)%
@@ -55,10 +78,12 @@ $endif$
     \fi}
 \renewcommand{\backreftwosep}{ and~} 
 \renewcommand{\backreflastsep}{ and~}
+
+% Hypersetup
 \hypersetup{
-  linkcolor=Mahogany,
-  citecolor=Mahogany,
-  urlcolor=darkblue, 
+  linkcolor=$if(linkcolor)$$linkcolor$$else$Mahogany$endif$,
+  citecolor=$if(citecolor)$$linkcolor$$else$Mahogany$endif$,
+  urlcolor=$if(urlcolor)$$urlcolor$$else$darkblue$endif$, 
   breaklinks=true, 
   colorlinks=true,
   $if(title-meta)$
@@ -70,7 +95,8 @@ $endif$
   $if(keywords)$
   pdfkeywords={$for(keywords)$$keywords$$sep$; $endfor$},
   $endif$}
-\setlength{\parindent}{1cm}
+
+% If XeTex, LuaLaTeX, etc
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -115,11 +141,7 @@ $endif$
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
 
-$if(monospace-url)$
-$else$
-\urlstyle{same}  % don't use monospace font for urls
-$endif$
-
+% Language
 $if(lang)$
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
@@ -134,10 +156,11 @@ $for(polyglossia-otherlangs)$
 $endfor$
 \fi
 $endif$
+
+% Bibliography
 $if(natbib)$
 \usepackage{natbib}
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
-\usepackage{etoolbox}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$apalike$endif$}
 \makeatletter
 % Remove comma after author
 \setcitestyle{aysep={}}
@@ -184,6 +207,8 @@ $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
 $endif$
+
+% Listings
 $if(listings)$
 \usepackage{listings}
 $endif$
@@ -193,13 +218,19 @@ $endif$
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
+
+% Verbatim
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
+
+% Tables
 $if(tables)$
 \usepackage{longtable,booktabs}
 $endif$
+
+% Graphics
 $if(graphics)$
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -211,8 +242,9 @@ $if(graphics)$
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
-$if(links-as-notes)$
+
 % Make links footnotes instead of hotlinks:
+$if(links-as-notes)$
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
 $endif$
 $if(strikeout)$
@@ -220,18 +252,15 @@ $if(strikeout)$
 % avoid problems with \sout in headers with hyperref:
 \pdfstringdefDisableCommands{\renewcommand{\sout}{}}
 $endif$
- $if(indent)$
- $else$
- \IfFileExists{parskip.sty}{%
- \usepackage{parskip}
- }{% else
- \setlength{\parindent}{0pt}
- \setlength{\parskip}{0pt}
- }
- $endif$
+% $if(parindent)$
+%\setlength{\parindent}{1.5em}
+%\setlength{\parskip}{0pt}
+% $endif$
  \setlength{\emergencystretch}{3em}  % prevent overfull lines
  \providecommand{\tightlist}{%
    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+   
+% Numbered sections
 $if(numbersections)$
 \setcounter{secnumdepth}{5}
 $else$
@@ -270,8 +299,12 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-\doublespacing
+% Spacing
+$if(spacing)$
+\$spacing$spacing
+$endif$
 
+% Title
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
@@ -279,20 +312,26 @@ $if(subtitle)$
 \providecommand{\subtitle}[1]{}
 \subtitle{$subtitle$}
 $endif$
+
+% Author
 $if(author)$
 \author{$for(author)$$author$$sep$ \and $endfor$}
 $endif$
+
+% Date
 \date{$date$}
 
+% Begin document
 \begin{document}
 $if(title)$
 \maketitle
 $endif$
 
+% Abstract
 $if(abstract)$
 \begin{abstract}
-\noindent $abstract$
-\vspace{.5cm}
+$if(abstractspacing)$\$abstractspacing$spacing$else$\doublespacing$endif$ \noindent $abstract$
+\vspace{.25cm}
 
 $if(keywords)$
 \noindent \textbf{Keywords}: $keywords$
@@ -308,13 +347,12 @@ $endif$
 
 $for(include-before)$
 $include-before$
-
 $endfor$
+
+% Table of Contents
 $if(toc)$
 {
-$if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-$endif$
+\hypersetup{linkcolor=black}
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
 }
@@ -327,6 +365,7 @@ $if(lof)$
 $endif$
 $body$
 
+% More bibliography
 $if(natbib)$
 $if(bibliography)$
 $if(biblio-title)$
