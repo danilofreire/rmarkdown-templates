@@ -1,5 +1,7 @@
 % !TEX program = XeLaTeX
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
+
+% Fonts
 $if(fontfamily)$
 \usepackage[$fontfamilyoptions$]{$fontfamily$}
 $else$
@@ -58,7 +60,7 @@ $endif$
 \usepackage{mathtools}
 \usepackage{caption}
 
-% Babel
+% UK English
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
 \cleanlookdateon
@@ -342,7 +344,6 @@ $if(jelcodes)$
 $endif$
 $endif$
 \end{abstract}
-\newpage
 $endif$
 
 $for(include-before)$
