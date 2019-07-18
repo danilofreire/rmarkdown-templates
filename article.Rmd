@@ -106,7 +106,7 @@ kable(df, "latex", booktabs = T, caption = "Your Caption") %>%
 
 \doublespacing 
 
-I still have to find a better way to have single-spaced `knitr` code chunks and double-spaced text in the manuscript. Sorry for that. So far you have to add `\doublespacing` after each code chunk. If I find a way to make this easier, I will :)
+I still have to find a better way to have single-spaced `knitr` code chunks and double-spaced text in the manuscript. Sorry for that. So far you have to add `\doublespacing` after each code chunk. If I find a way to make this easier, I will add it to the template :)
 
 \newpage
 \setlength{\parindent}{0cm}
