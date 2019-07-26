@@ -28,7 +28,7 @@ output:
     keep_tex: no
     toc: no
     toc_depth: 3
-    template: template.latex
+    template: article-template.latex
 ---
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}

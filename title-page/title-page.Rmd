@@ -1,0 +1,45 @@
+---
+title:  Title Page
+author: 
+date: \today
+fontsize: 12pt
+margin: 2cm
+urlcolor: darkblue
+linkcolor: Mahogany
+citecolor: Mahogany
+spacing: onehalf
+papersize: a4paper
+output:
+  pdf_document:
+    number_sections: no
+    keep_tex: no
+    toc: no
+    template: title-page-template.latex
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# If you need to install any package while knitting the document
+r <- getOption("repos")
+r["CRAN"] <- "https://cran.rstudio.com/"
+options(repos = r)
+```
+
+### Manuscript Title: 
+
+\noindent Paper Title
+
+### Authors:
+
+\noindent Danilo Freire (corresponding author). Postdoctoral Research Associate, The Political Theory Project, Brown University, Providence, RI 02912, USA, Voice: +1 (401) 584-2494,  [danilo_freire@brown.edu](mailto:danilo_freire@brown.edu), <http://danilofreire.github.io>, <http://twitter.com/danilofreire>. 
+
+\vspace{.4cm}
+
+\noindent Umberto Mignozzetti. Assistant Professor, School of International Relations, Fundação Getulio Vargas, São Paulo, SP, Brazil and PhD Candidate, Wilf Family Department of Politics, NYU, NY, USA, [umberto.mignozzetti@fgv.br](mailto:umberto.mignozzetti@fgv.br), <http://umbertomig.com>, <http://twitter.com/umbertomig>.
+
+### Contact Details:
+
+The Political Theory Project, 8 Fones Alley, Providence, RI 02912, USA, Voice: +1 (401) 584-2494, Email:  [danilo_freire@brown.edu](mailto:danilo_freire@brown.edu).
+
+### Funding Agency:
+
+We acknowledge financial support from .... 

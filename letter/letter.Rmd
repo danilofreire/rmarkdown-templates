@@ -1,0 +1,59 @@
+---
+author: 
+    - Danilo Freire
+opening: To Whom It May Concern,
+closing: Sincerely,
+address:
+    - The Editors
+    - Journal of Academic Studies
+return-address: 
+    - Danilo Freire
+    - 8 Fones Alley
+    - 02912 Providence, RI
+    - United States of America
+cc:
+    - Recipient 1
+    - Recipient 2
+encl:
+    - Enclosure 1
+    - Enclosure 2
+letterhead: 
+signature: 
+urlcolor: darkblue
+linkcolor: Mahogany
+citecolor: Mahogany
+spacing: onehalf
+margin: 2cm
+papersize: a4paper
+fontsize: 12pt
+signature-before: -4ex
+signature-after: 0ex
+colorlinks: true
+output: 
+    pdf_document:
+        template: letter-template.latex
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis
+dolor vitae tristique eleifend. Quisque non ipsum sit amet velit
+malesuada consectetur. Praesent vel facilisis leo. Sed facilisis
+varius orci, ut aliquam lorem malesuada in. Morbi nec purus at nisi
+fringilla varius non ut dui. Pellentesque bibendum sapien velit. Nulla
+purus justo, congue eget enim a, elementum sollicitudin eros. Cras
+porta augue ligula, vel adipiscing odio ullamcorper eu. In tincidunt
+nisi sit amet tincidunt tincidunt. Maecenas elementum neque [eget dolor](http://website.com):
+
+> Nullam eget dapibus quam, sit amet sagittis magna. Nam tincidunt,
+> orci ac imperdiet ultricies, neque metus ultrices quam, id gravida
+> augue lacus ac leo.
+
+Vestibulum id sodales lectus, sed scelerisque quam. Nullam auctor mi
+et feugiat commodo. Duis interdum imperdiet nulla, vitae bibendum eros
+placerat non. Cras ornare, risus in faucibus malesuada, libero sem
+fringilla quam, ut luctus enim sapien eget dolor.
+
+Quis vel eros donec ac odio tempor. Pretium fusce id velit ut tortor. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Lacus viverra vitae congue eu consequat ac felis donec. Mattis molestie a iaculis at. Ultrices in iaculis nunc sed augue lacus viverra. Sed elementum tempus egestas sed. Mauris augue neque gravida in fermentum et sollicitudin ac orci. Non pulvinar neque laoreet suspendisse interdum consectetur. Nulla aliquet porttitor lacus luctus accumsan tortor. 
+
+Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Nisl purus in mollis nunc. Volutpat maecenas volutpat blandit aliquam etiam erat velit. Velit euismod in pellentesque massa. Quisque sagittis purus sit amet. Arcu cursus euismod quis viverra nibh cras pulvinar mattis nunc.
+
+Elementum eu facilisis sed odio. Eu scelerisque felis imperdiet proin fermentum leo vel. Feugiat nisl pretium fusce id velit ut. Bibendum enim facilisis gravida neque convallis a cras semper auctor. At elementum eu facilisis sed odio morbi quis. A diam maecenas sed enim ut sem. Turpis nunc eget lorem dolor sed viverra. Sit amet cursus sit amet dictum sit amet justo. Orci nulla pellentesque dignissim enim sit. Nulla at volutpat diam ut venenatis tellus in metus vulputate. Cras fermentum odio eu feugiat pretium nibh. Duis convallis convallis tellus id. Sed felis eget velit aliquet sagittis. Non enim praesent elementum facilisis leo vel fringilla. Sodales ut eu sem integer.
