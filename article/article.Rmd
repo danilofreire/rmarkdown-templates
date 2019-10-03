@@ -36,6 +36,9 @@ output:
 r <- getOption("repos")
 r["CRAN"] <- "https://cran.rstudio.com/"
 options(repos = r)
+if (!require("kableExtra")) {
+    install.packages("kableExtra")
+}
 ```
 
 [^auth01]: You can add author information using footnotes. 
