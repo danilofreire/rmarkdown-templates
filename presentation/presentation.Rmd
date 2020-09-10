@@ -1,0 +1,108 @@
+---
+title: "Very Cool Paper: <br> Evidence from an Interesting Experiment <br><br><br><br>"
+subtitle: ""
+author: "Danilo Freire, Nice University <br> John Doe, Great University <br><br>"
+date: "10/09/2020"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      beforeInit: "macros.js"
+      highlightStyle: github
+      ratio: 16:10
+      titleSlideClass: [middle, left]
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+list.of.packages <- c("xaringan", "xaringanthemer")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+library(xaringanthemer)
+style_mono_accent(
+  base_color          = "#1c5253",
+  header_h1_font_size = "2.25rem",
+  header_h2_font_size = "1.85rem",
+  header_font_google  = google_font("Josefin Sans"),
+  text_font_google    = google_font("Montserrat", "300", "300i"),
+  text_font_size      = "1.25rem",
+  code_font_google    = google_font("Fira Mono")
+)
+```
+
+# Xaringan and Xaringan-Themer
+
+* This is the first slide
+
+--
+
+* It uses the [xaringan](https://github.com/yihui/xaringan) and the
+  [xaringan-themer](https://github.com/gadenbuie/xaringanthemer) `R` packages
+
+--
+
+* In my view, xaringan has several advantages over beamer:
+
+  - Easier to use (no more brackets)
+  - Can be read on any browser
+  - Looks very nice!
+
+--
+
+* Please refer to the [xaringan documentation
+  files](https://slides.yihui.org/xaringan) for more information about how use
+  the package. For a quick introduction to RMarkdown, take a look at [this
+  cheatsheet](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+---
+
+# Adding a picture
+
+.center[![:scale 90%](rioverde03.jpg)]
+
+---
+
+# Organising your presentation
+
+* Here are some personal notes about how I organise my slides. They may not be useful for others, but the following structure has helped me to be less verbose in my presentations
+
+--
+
+* My presentations usually have the same structure:
+
+  - Motivation (2-3 slides)
+  - What we do (1 slide)
+  - What we find (1 slide)
+  - The experiment/case study (3 slides)
+  - Data and methods (2-3 slides)
+  - Results (as many slides as necessary, usually 5 or more)
+  - Discussion (2-3 slides)
+  - Thank you and contact information (2 slides)
+
+---
+
+class: center, middle, inverse
+
+# Thank you very much! :)
+
+---
+
+# Let's keep in touch!
+
+<br>
+
+* Danilo Freire:
+
+  - [danilofreire@gmail.com](mailto:danilofreire@gmail.com)
+  - <http://danilofreire.github.io>
+
+<br>
+
+* John Doe:
+
+  - [john@doe.com](mailto:john@doe.com)
+  - <http://coolwebsite.com>
+
