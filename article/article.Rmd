@@ -39,6 +39,14 @@ options(repos = r)
 if (!require("kableExtra")) {
     install.packages("kableExtra")
 }
+
+def_chunk_hook  <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+  x <- def_chunk_hook(x, options)
+  ifelse(options$size != "normalsize",
+         paste0("\n \\", options$size, "\n\n", x,
+                "\n\n \\normalsize"), x)
+})
 ```
 
 [^auth01]: You can add author information using footnotes. 
@@ -81,7 +89,7 @@ Y = \beta_{0} + \beta_{1} X + \epsilon
 R chunk: 
 
 \singlespacing
-```{r, tidy=FALSE, fig.align='center', fig.width=4.5, fig.height=3, fig.cap="A simple scatterplot with a caption quote"}
+```{r, size = "footnotesize", tidy=FALSE, fig.align='center', fig.width=4.5, fig.height=3, fig.cap="A simple scatterplot with a caption quote"}
 data("mtcars")
 summary(mtcars[,1:4])
 plot(mtcars$hp, mtcars$mpg,
@@ -95,7 +103,7 @@ abline(lm(mpg ~ hp, data = mtcars), col = "red")
 
 A table using `kableExtra()`:
 
-```{r, tidy=FALSE, warning=FALSE, cache=TRUE}
+```{r, size = "footnotesize", tidy=FALSE, warning=FALSE, cache=TRUE}
 library(kableExtra)
 df <- mtcars[1:5, 1:6]
 kable(df, "latex", booktabs = T, caption = "Your Caption") %>%
@@ -106,10 +114,6 @@ kable(df, "latex", booktabs = T, caption = "Your Caption") %>%
   add_header_above(c(" ", "Group 5" = 4, "Group 6" = 2), bold = T) %>%
   footnote(general = "Your comments go here.")
 ```
-
-\doublespacing 
-
-I still have to find a better way to have single-spaced `knitr` code chunks and double-spaced text in the manuscript. Sorry for that. So far you have to add `\doublespacing` after each code chunk. If I find a way to make this easier, I will add it to the template :)
 
 \newpage
 \setlength{\parindent}{0cm}
