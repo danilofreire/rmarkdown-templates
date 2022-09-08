@@ -24,22 +24,41 @@ r["CRAN"] <- "https://cran.rstudio.com/"
 options(repos = r)
 ```
 
-### Manuscript Title: 
+### Manuscript Title
 
-\noindent Paper Title
+\noindent "Paper Title"
 
-### Authors:
+### Authors
 
-\noindent Danilo Freire (corresponding author). Postdoctoral Research Associate, The Political Theory Project, Brown University, Providence, RI 02912, USA, Voice: +1 (XXX) XXX-XXXX,  [your@email.com](mailto:your@email.com), <http://danilofreire.github.io>, <http://twitter.com/danilofreire>. 
+\noindent Danilo Freire: Senior Lecturer, School of Social and Political Sciences, University
+of Lincoln, Brayford Pool, Lincoln, Lincolnshire LN6 7TS, United Kingdom,
+<dfreire@lincoln.ac.uk>, <https://danilofreire.github.com>. Corresponding
+author.
 
 \vspace{.4cm}
 
-\noindent Umberto Mignozzetti. Assistant Professor, School of International Relations, Fundação Getulio Vargas, São Paulo, SP, Brazil and PhD Candidate, Wilf Family Department of Politics, NYU, NY, USA, [your@email.com](mailto:your@email.com), <http://umbertomig.com>, <http://twitter.com/umbertomig>.
+\noindent Umberto Mignozzetti: Assistant Teaching Professor, Department of
+Political Science and Computational Social Science Program, University of
+California, San Diego, SSB 393, 2997 Thurgood Marshall Ln, La Jolla, CA 92037,
+United States of America, <umbertomig@ucsd.edu>, <https://umbertomig.com>.
 
-### Contact Details:
+### Data Availability Statement
 
-The Political Theory Project, 8 Fones Alley, Providence, RI 02912, USA, Voice: +1 (XXX) XXX-XXXX, Email:  [your@email.com](your@email.com).
+Replication materials are available at <https://github.com/danilofreire>.
 
-### Funding Agency:
+### Funding Statement
 
-We acknowledge financial support from .... 
+This research was funded by the Fundação Getulio Vargas Applied Research Grant
+Office (RPCAP-FGV). The funding body did not interfere in the study design or
+implementation.
+
+### Conflict of Interest Disclosure
+
+The authors declare that no competing interests exist, financial or otherwise.
+
+### Ethics Approval Statement
+
+The experiment was pre-registered using the EGAP pre-registry tool (20180504AA)
+and received IRB approval from New York University (IRB-FY2017-17) and Fundação
+Getulio Vargas (IRB-01/2017).
+
