@@ -29,6 +29,8 @@ $endif$
 \usepackage{makecell}
 \usepackage{etoolbox}
 \usepackage{tocloft}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
 
 % Dots in toc
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
